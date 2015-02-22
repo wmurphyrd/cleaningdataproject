@@ -4,7 +4,7 @@ Course project for Coursera/Johns Hopkins Getting and Cleaning Data class
 
 The run_analysis function this repo performs a planned data processing script. 
 This script uses accelerometer data collected from subjects performing a variety of
-actions with a smart phone that is hosted by the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). This script assumes the data is already download and extracted from the zip file (with directory structure) in a folder within the working directory named "data". The processing is performed in 5 steps described below
+actions with a smart phone that is hosted by the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). This script assumes the data is already downloaded and extracted from the zip file (with directory structure) in a folder within the working directory named "data". The processing is performed in 5 steps described below
 
 ## 1. Load and Merge Data Sets
 
@@ -13,6 +13,8 @@ The raw data has been split randomly into two data sets to train algorithms and 
 * The three files are linked by row number, and all have complete data in the correct order. They are easily joined by column-binding after being read from file. 
 * The two data sets have identical columns also in matching order. They are easily row-bound to create a single, large data set
 * The columns "subject" and "activity" are id codes to describe each observation (row), and the remaining columns are pre-processed signal data
+
+**Note:** Because the matching is solely by row number, any reordering of the source files will result in mismatched data and inaccurate subject ids and acitivity types.
 
 ## 2. Exctract desired variables
 
@@ -32,4 +34,4 @@ At this point the data fully processed and a copy is saved to "tidyAccelerometer
 
 The data set contains many repeat observations for each subject and each activity. In this step, the repeats are aggregated and replaced with the average of the individual values. This is accomplished with the plyr package using ddplyr to hande the split-apply-combine process and numcolwise to apply the aggregation function to each signal. 
 
-The average aggregation is appleed to both the mean and standard devation signal types that are included, creating grand means and mean standard deviations. This data is output to the file "tidy AccelerometerDataAggregate.txt" and contains 180 observations for 66 signals. Each observation is labeled with subject number and activity type. 
+The average aggregation is applied to both the mean and standard devation signal types that are included, creating grand means and mean standard deviations. This data is output to the file "tidy AccelerometerDataAggregate.txt" and contains 180 observations for 66 signals. Each observation is labeled with subject number and activity type. 
