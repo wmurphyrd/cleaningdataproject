@@ -50,10 +50,10 @@ the source description. The Body signals contain the remainder
 Accelerometer / Gyroscope : which instrument the signal originated from
 Jerk : Derived vales (method in source description) to identify sudden motions
 X / Y / X : Signals from an indiviual axis of motation/rotation
-MagnituteEuclidean : Composite signal of all three axes (method in source description)
+MagnitudeEuclidean : Composite signal of all three axes (method in source description)
 Mean : Average value
 StdDev : Standard deviation value
-BodyBody : It is not known what this means, and no explanation was found int the source
+BodyBody : It is not known what this means, and no explanation was found in the source
 
 List of signal variable names:
 timeBodyAccelerometerMeanX
