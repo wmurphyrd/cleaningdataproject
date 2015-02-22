@@ -5,27 +5,48 @@ Source: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+
 The data comes from experiments described by the source as follows:
 
 ------------------------------------------------------------------------------------
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person 
+performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone 
+(Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration 
+and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.
+The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the
+training data and 30% the test data. 
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width 
+sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and
+body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational
+force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each
+window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
+These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using
+a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the
+acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using 
+another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ
+and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm
+(tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, 
+fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 ------------------------------------------------------------------------------------
 
-This data has been processed by cross-referecing separate tables provided in the source to create a comprehensive table and recombining the training and testing data sets. Of all the available signal summaries, only the mean and standard devations were retained. 
+This data has been processed by cross-referecing separate tables provided in the source to create a comprehensive table and
+recombining the training and testing data sets. Of all the available signal summaries, only the mean and standard devations
+were retained. 
 
-In the case of tidyAccelerometerDataAggregate.txt, the data is further summarized as the average of each signal type for each subject-activity pair. 
+In the case of tidyAccelerometerDataAggregate.txt, the data is further summarized as the average of each signal type for each
+subject-activity pair. 
 
-Each observation has a subject id ("subject") and descriptive activity name ("activity", values match the source descriptions above). 
+Each observation has a subject id ("subject") and descriptive activity name ("activity", values match the source descriptions
+above). 
 
 The 66 signal variables are listed below, and their names are composites whose meanings are described here
 
 time / frequency : Whether the data is time-domain processed or frequency-domain processed (FFT in source descrpition)
-Body / Gravity : The approximate portion of the raw signals that can be asribed to gravity was separated out as described in the source description. The Body signals contain the remainder
+Body / Gravity : The approximate portion of the raw signals that can be asribed to gravity was separated out as described in 
+the source description. The Body signals contain the remainder
 Accelerometer / Gyroscope : which instrument the signal originated from
 Jerk : Derived vales (method in source description) to identify sudden motions
 X / Y / X : Signals from an indiviual axis of motation/rotation
